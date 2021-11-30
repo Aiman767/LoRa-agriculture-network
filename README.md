@@ -4,6 +4,7 @@
 Smart agricultural network is a smart system that depends on both hardware components in the field and a devoted software infrastructure to transmit agricultural data. The agricultural data transmitted can be anything that will provide insightful value such as temperature, humidity, and sunlight measurements from sensors in the field. These data points can then be analyzed over time using the software in the cloud. It was proposed to optimize resource management in commercial scale agricultural systems, and can be retrofitted into existing farming, or gardening processes as required. This paper provides a summarized use case for a spread-out agricultural system: data is collected in the field and transmitted to the Cloud, then displayed in an interface where reactive prompts are triggered based on measurement thresholds.
 Keywords— Agriculture, Wi-Fi enabled network, sensors, SMS Alerts, Twitter Tweet Alerts.
 
+
 ## I.	Introduction 
 Agriculture is a growing business that feeds the world. As the global population rises, many mistakes and inefficiencies that were palatable in the past now have graver consequences. The amount of food wastage is astonishing, for all food grown and manufactured 32 % is wasted (Greid, J. 2019). Numbers like that coupled with climate change and its effects on both the global economy and agriculture supply chains will be devasting; in some parts of the world this devastation is being felt more than others. 
 The smart agricultural network is a smart system that monitors agricultural data in the field from any remote location to some cloud infrastructure for visualization, analysis, and scheduled action. 
@@ -23,23 +24,24 @@ The list below is a checklist of all that we've accomplished so far:
 - [ ] Lo-Ra comms between Main Control and Surbodinate Units. 
 ---
 
+
 ## II.	Implementation
 
 The Figure 2 below represents our technology stack. The data is collected from a sensor in the field, it is transmitted through a Wi-Fi enabled device to the Cloud. The cloud infrastructure handles data visualization and contains backend logic to update all the visuals according to the use case. The cloud infrastructure also uses third party APIs to send alerts to the client through common applications such as Twitter; the more crucial updates are given to the user via SMS. 
 The use case in this report focuses on a single sensor – the DHT11 – which collects both temperature and humidity measurements in its vicinity. The DHT11 sensor represents a sensor in the field, and it was connected to an ESP8266 NodeMCU. The ESP8266 NodeMCU is a Wi-Fi enabled microcontroller that acts as a gateway for information coming from the field. Refer to Figure 1 below. The data is transmitted to the ThingSpeak platform which serves as the Cloud infrastructure for this project. This is achieved by using the Write API POST request; there is code on the ESP8266 which constructs a json based request from the private ThingSpeak channel to update its fields based on the incoming field values from the sensor. 
  
-![Figure 1 – ESP8266 NodeMCU connection with DHT11 sensor.](http://url/to/img.png)
+![Figure 1 – ESP8266 NodeMCU connection with DHT11 sensor.](./images/schematic_incomplete.png)
 
 
 The reason for using a private ThingSpeak channel was to ensure that in the event these agricultural readings were not for public consumption, other users would not have access. For the use case, there are three private channels which represent data coming from three different locations around the world – Kenya, Mongolia, and Canada. These values were then consolidated into a public channel aptly named Main Display Channel which serves as the main hub for data visualization across the entire agricultural enterprise. This layer serves in providing some encapsulation for how the farm owners or clients display their data to the public. 
  
-![Figure 2 -Technology Stack.](http://url/to/img.png)
+![Figure 2 - Architecture.](./images/tech_stack_incomplete.png)
 
 
 Finally, each of the private channels – representing each of the field locations around the globe – have ThingHTTP and ThingTweet React components which allow the system to prompt the user of certain desirable or undesirable conditions depending on how they are set up. For this use case, each location was given a range of acceptable values and whenever that threshold was passed the system would use the reactive components to either Tweet and/or send an SMS. In a real-world application, one would configure the system to Tweet non-crucial or desirable facts or conditions about the field locations. And SMS prompts will be used for cautionary, undesirable conditions when human intervention is required as soon as possible.   
 
-![Figure 3 – Channel Configuration and Main Display.](http://images/img.png)                                             
-![Figure 4- ThingSpeak, ThingHTTP & ThingTweet.](http://images/thingspeak_react_tools.png)
+![Figure 3 – Channel Configuration and Main Display.](./images/channel_public_private_config.png)                                             
+![Figure 4- ThingSpeak, ThingHTTP & ThingTweet.](./images/thingspeak_react_tools.png)
                                
 
 ## III.	Applications
@@ -58,17 +60,17 @@ The are several applications of the smart agricultural network since it provides
 
 3.	ESP8266 Fatal Crash: ESP8266 NodeMCU had a fatal crash and needed to be rebooted using a python tool. To do this, the python tool was cloned from GitHub courtesy of espressif at https://github.com/espressif/esptool
 
-![Figure 5 - Cloned Repository for ESPTools.](http://url/to/img.png)
+![Figure 5 - Cloned Repository for ESPTools.](./images/clone_esptool.png)
 
 Then it was built and run, though not without some trouble. This effectively formatted the NodeMCU and restored it to Factory settings. 
 
-![Figure 6 - Console Output on successful memory scrub.](http://url/to/img.png)
+![Figure 6 - Console Output on successful memory scrub.](./images/memory_scrub_esptool.png)
 
 
 
 4.	Unstable ESP8266 NodeMCU Wi-Fi Connection: The image below shows the serial monitor of the ESP8266 NodeMCU as it establishes a connection with the ThingSpeak Private Channel for the Location in Canada. The values which go into field are from the DHT11 Temperature and Humidity Sensor. 
 
-![Figure 7 - Unstable Logging for Wi-Fi uplink.](http://url/to/img.png)
+![Figure 7 - Logging unstable Wi-Fi uplink.](./images/logging_unstable_wifi_uplink.png)
 
 Notice that some log entries described successful uplink, and other times the uplink failed. After the fatal crash of the ESP8266 node, it was hard to say what caused these disturbances. 
 
@@ -76,8 +78,10 @@ Notice that some log entries described successful uplink, and other times the up
 
 The Lo-Ra enabled component would have made long ranged communication between several nodes possible. For an end user this would have meant the installation of several monitoring systems for different regions – measuring distances up to 10 km apart – in a star topology network. The value of that expansion is obvious in the industry, especially when one factors in that no long-distance wiring or battery replacements would be scheduled for a long time, since Lo-Ra communication consumes very little power.
 
+
 ## V.	Conclusion
 The smart agricultural network integrates sensing and networking technologies to bring consolidate functionality around optimal resource management and waste prevention in agriculture. The economic potential, especially if complemented with LoRa, is great. By mitigating 32% wastage to even 20% wastage will mean millions more get fed. It also has the potential to minimize global warming problems, since agricultural endeavors play a big part in climate change issues. More information on this project can be found in our GitHub repository.
+
 
 ## VI.	References
 
