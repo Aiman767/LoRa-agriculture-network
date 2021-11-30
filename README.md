@@ -22,6 +22,9 @@ The list below is a checklist of all that we've accomplished so far:
 - [ ] Lo-Ra on ESP8266 
 - [ ] Lo-Ra on Surbodinate Field Units
 - [ ] Lo-Ra comms between Main Control and Surbodinate Units. 
+
+**NOTE**: On project completion, directions will be given for implementation.
+
 ---
 
 
