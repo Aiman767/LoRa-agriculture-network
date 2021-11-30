@@ -46,19 +46,19 @@ Finally, each of the private channels – representing each of the field locatio
 
 ## III.	Applications
 The are several applications of the smart agricultural network since it provides value in the way of resource optimization and on tap information about otherwise inaccessible or remote farming locations. Some of these applications are as follows:
-•	Real-time SMS Notification: Based on the use case outlined, the value offered can be recognized as real-time response through SMS notifications. 
-•	Farming Resource Visualization: A client may visualize their resource usage through the ThingSpeak channel. Based on the use case, through temperature and humidity readings from the DHT11 sensor. Although neither heating nor irrigation actuators were implemented, if a field location such as an indoor farm that pays for heating was measure their resource usage in terms of heating and water consumption, this will be possible by measuring the temperature and humidity values at different locations of the field.
-•	On-Tap Information: Using a mobile device, a client or stakeholder can see the conditions that their crops are flourishing in. This can be achieved by simply logging in with a Mat-Lab account with access to said channel or by seeing the Tweets from said channel. 
-•	Automatic Resource Management: This application was not covered in the use case, but it is possible to use a system of sensors for reading measurements and accompanying actuators to automatically control the environment based on some given set point of said measurements. For example, a temperature gauge and a heater could be employed together to monitor and change the temperature in an indoor farm in a field location in Canada.
+- **Real-time SMS Notification**: Based on the use case outlined, the value offered can be recognized as real-time response through SMS notifications. 
+- **Farming Resource Visualization**: A client may visualize their resource usage through the ThingSpeak channel. Based on the use case, through temperature and humidity readings from the DHT11 sensor. Although neither heating nor irrigation actuators were implemented, if a field location such as an indoor farm that pays for heating was measure their resource usage in terms of heating and water consumption, this will be possible by measuring the temperature and humidity values at different locations of the field.
+- **On-Tap Information**: Using a mobile device, a client or stakeholder can see the conditions that their crops are flourishing in. This can be achieved by simply logging in with a Mat-Lab account with access to said channel or by seeing the Tweets from said channel. 
+- **Automatic Resource Management**: This application was not covered in the use case, but it is possible to use a system of sensors for reading measurements and accompanying actuators to automatically control the environment based on some given set point of said measurements. For example, a temperature gauge and a heater could be employed together to monitor and change the temperature in an indoor farm in a field location in Canada.
 
 
 ## IV.	Challenges
 
-1.	Security and Privacy: The only security measure implemented in the use case was the layer of encapsulation in the public channel which provided a comprehensive plot of the private channels. The user may control what they want the public to see, and in a farming use case this should be more than enough security. However, if a client will need to implement additional security measures if they hope to safeguard their data against other forms of hacks and prying eyes.
+1.	**Security and Privacy**: The only security measure implemented in the use case was the layer of encapsulation in the public channel which provided a comprehensive plot of the private channels. The user may control what they want the public to see, and in a farming use case this should be more than enough security. However, if a client will need to implement additional security measures if they hope to safeguard their data against other forms of hacks and prying eyes.
 
-2.	Data management: Potentially, the system can be easily configured to collect and transmit more data to the ThingSpeak platform. However, it falls on the analyst to determine what type of data is most for data visualization and what others are even more crucial to attach reactive prompts to. 
+2.	**Data management**: Potentially, the system can be easily configured to collect and transmit more data to the ThingSpeak platform. However, it falls on the analyst to determine what type of data is most for data visualization and what others are even more crucial to attach reactive prompts to. 
 
-3.	ESP8266 Fatal Crash: ESP8266 NodeMCU had a fatal crash and needed to be rebooted using a python tool. To do this, the python tool was cloned from GitHub courtesy of espressif at https://github.com/espressif/esptool
+3.	**ESP8266 Fatal Crash**: ESP8266 NodeMCU had a fatal crash and needed to be rebooted using a python tool. To do this, the python tool was cloned from GitHub courtesy of espressif at https://github.com/espressif/esptool
 
 ![Figure 5 - Cloned Repository for ESPTools.](./images/clone_esptool.png)
 
@@ -68,13 +68,13 @@ Then it was built and run, though not without some trouble. This effectively for
 
 
 
-4.	Unstable ESP8266 NodeMCU Wi-Fi Connection: The image below shows the serial monitor of the ESP8266 NodeMCU as it establishes a connection with the ThingSpeak Private Channel for the Location in Canada. The values which go into field are from the DHT11 Temperature and Humidity Sensor. 
+4.	**Unstable ESP8266 NodeMCU Wi-Fi Connection**: The image below shows the serial monitor of the ESP8266 NodeMCU as it establishes a connection with the ThingSpeak Private Channel for the Location in Canada. The values which go into field are from the DHT11 Temperature and Humidity Sensor. 
 
 ![Figure 7 - Logging unstable Wi-Fi uplink.](./images/logging_unstable_wifi_uplink.png)
 
 Notice that some log entries described successful uplink, and other times the uplink failed. After the fatal crash of the ESP8266 node, it was hard to say what caused these disturbances. 
 
-5.	LoRa Network Problems: This application was not covered in the use case, but the original idea was to involve other node devices in a minimal scale Lo-Ra network. The team was not able to implement a Lo-Ra network to take of the advantage of the long-range network that LoRa enables [4].  
+5.	**LoRa Network Problems**: This application was not covered in the use case, but the original idea was to involve other node devices in a minimal scale Lo-Ra network. The team was not able to implement a Lo-Ra network to take of the advantage of the long-range network that LoRa enables [4].  
 
 The Lo-Ra enabled component would have made long ranged communication between several nodes possible. For an end user this would have meant the installation of several monitoring systems for different regions – measuring distances up to 10 km apart – in a star topology network. The value of that expansion is obvious in the industry, especially when one factors in that no long-distance wiring or battery replacements would be scheduled for a long time, since Lo-Ra communication consumes very little power.
 
