@@ -3,8 +3,8 @@
 
 char jsonBuffer[500] = "["; // Initialize the jsonBuffer to hold data
 
-char ssid[] = "63 Beaucourt"; //  Your network SSID (name)
-char pass[] = "gohavefun2020"; // Your network password
+char ssid[] = "XXXXXXXX"; //  Your network SSID (name)
+char pass[] = "XXXXXXXX"; // Your network password
 WiFiClient client; // Initialize the WiFi client library
 
 char server[] = "api.thingspeak.com"; // ThingSpeak Server
