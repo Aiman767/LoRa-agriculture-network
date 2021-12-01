@@ -9,8 +9,8 @@ DHT dht(DHTPIN, DHTTYPE);
 
 char jsonBuffer[500] = "["; // Initialize the jsonBuffer to hold data
 
-char ssid[] = "63 Beaucourt"; //  Your network SSID (name)
-char pass[] = "gohavefun2020"; // Your network password
+char ssid[] = "XXXXXXX"; //  Your network SSID (name)
+char pass[] = "XXXXXXX"; // Your network password
 WiFiClient client; // Initialize the WiFi client library
 
 char server[] = "api.thingspeak.com"; // ThingSpeak Server
