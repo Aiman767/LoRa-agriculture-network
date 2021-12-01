@@ -88,8 +88,8 @@ The smart agricultural network integrates sensing and networking technologies to
 
 ## VI.	References
 
-[1]	Subhidh, “Subhidh/smart-agriculture: A project on agriculture that decides when to irrigate the crops, can monitor the health and diseases using machine learning as well,” GitHub. [Online]. Available: https://github.com/subhidh/Smart-Agriculture. [Accessed: 29-Nov-2021]. 
-[2]	A. Ghosh, “Building IOT Smarter Smoke Alarm with esp8266, mq2 -text notification,” SrcCodes, 31-Aug-2020. [Online]. Available: https://www.srccodes.com/iot-smoke-alarm-esp8266-mq2-gas-sensor-twilio-cloud-sms-thingspeak-analytics-mqtt/. [Accessed: 29-Nov-2021]. 
-[3]	Sayali S.Makone, D.G. Khairnar, Trupti Wagh, “Smart Agriculture using LoRaWan and ThingSpeak Cloud Platform,” [Accessed: 29-Nov-2021].
-[4]	“What is Lora®?,” Semtech. [Online]. Available: https://www.semtech.com/lora/what-is-lora. [Accessed: 29-Nov-2021]. 
-[5]	J. Greig, “Researchers zero in on farm level food waste,” Farmtario, 19-Feb-2019. [Online]. Available: https://farmtario.com/news/researchers-zero-in-on-farm-level-food-waste/. [Accessed: 29-Nov-2021]. 
+- [1]	Subhidh, “Subhidh/smart-agriculture: A project on agriculture that decides when to irrigate the crops, can monitor the health and diseases using machine learning as well,” GitHub. [Online]. Available: https://github.com/subhidh/Smart-Agriculture. [Accessed: 29-Nov-2021]. 
+- [2]	A. Ghosh, “Building IOT Smarter Smoke Alarm with esp8266, mq2 -text notification,” SrcCodes, 31-Aug-2020. [Online]. Available: https://www.srccodes.com/iot-smoke-alarm-esp8266-mq2-gas-sensor-twilio-cloud-sms-thingspeak-analytics-mqtt/. [Accessed: 29-Nov-2021]. 
+- [3]	Sayali S.Makone, D.G. Khairnar, Trupti Wagh, “Smart Agriculture using LoRaWan and ThingSpeak Cloud Platform,” [Accessed: 29-Nov-2021].
+- [4]	“What is Lora®?,” Semtech. [Online]. Available: https://www.semtech.com/lora/what-is-lora. [Accessed: 29-Nov-2021]. 
+- [5]	J. Greig, “Researchers zero in on farm level food waste,” Farmtario, 19-Feb-2019. [Online]. Available: https://farmtario.com/news/researchers-zero-in-on-farm-level-food-waste/. [Accessed: 29-Nov-2021]. 
