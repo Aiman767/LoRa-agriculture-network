@@ -19,11 +19,12 @@ The list below is a checklist of all that we've accomplished so far:
 - [x] Reactive Twitter Notifications via Bot Account 
 - [x] Wi-Fi comms. from ESP8266 nodeMCU (Main Control Field Unit) to ThingSpeak.
 - [x] DHT11 data to ESP8266 (direct for the moment, since Lo-Ra is not set up yet)
-- [ ] Lo-Ra on ESP8266 
-- [ ] Lo-Ra on Surbodinate Field Units
-- [ ] Lo-Ra comms between Main Control and Surbodinate Units. 
+- [x] Lo-Ra on ESP8266 
+- [x] Lo-Ra on Surbodinate Field Units
+- [x] Lo-Ra comms between Main Control and Surbodinate Units. 
+- [ ] Lo-Ra data to ThingSpeak
 
-**NOTE**: On project completion, directions will be given for implementation.
+**NOTE**: On project completion, directions will be given for implementation. For now, the Lo-Ra enabled component has not been completed but there is code in the repository that establishes simple back and forth communication between the devices. 
 
 ---
 
