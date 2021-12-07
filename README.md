@@ -1,5 +1,9 @@
 # Smart Agricultural Network
 
+Links
+- [To Agricultural Public Display](https://thingspeak.com/channels/1586972/)
+- [YouTube Demo of Use Case 3 from Report](https://youtu.be/VJ_9g-JGSwQ)
+
 ## Abstract
 Smart agricultural network is a smart system that depends on both hardware components in the field and a devoted software infrastructure to transmit agricultural data. The agricultural data transmitted can be anything that will provide insightful value such as temperature, humidity, and sunlight measurements from sensors in the field. These data points can then be analyzed over time using the software in the cloud. It was proposed to optimize resource management in commercial scale agricultural systems, and can be retrofitted into existing farming, or gardening processes as required. This paper provides a summarized use case for a spread-out agricultural system: data is collected in the field and transmitted to the Cloud, then displayed in an interface where reactive prompts are triggered based on measurement thresholds.\
 ***Keywords** — Agriculture, Wi-Fi enabled network, sensors, SMS Alerts, Twitter Tweet Alerts.*
